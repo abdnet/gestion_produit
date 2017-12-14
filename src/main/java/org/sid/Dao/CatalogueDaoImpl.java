@@ -13,11 +13,7 @@ public class CatalogueDaoImpl implements IcatalogueDao {
 	private Map<String,Produits> produits= new HashMap<String, Produits>();
 	Logger logger = Logger.getLogger(this.getClass());
 	public void addProduit(Produits p) {
-		if( p!=null && !p.getReference().equals("")){
 			produits.put(p.getReference(), p);
-		}else{
-			logger.warn("L'objet produit n'est pas valide");
-		}
 			
 	}
 
